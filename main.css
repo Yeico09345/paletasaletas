@@ -3,9 +3,19 @@
     padding: 0;
 }
 
+/* Fondo multicolor */
 body {
-    height: 1000px;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: white; /* Asegúrate de que el texto sea legible */
+}
+
+/* Animación del gradiente */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .navbar { 
@@ -19,18 +29,13 @@ body {
     -webkit-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
     -moz-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62); 
     box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
-    transition: top 0.3s; /* Smooth transition for show/hide */
-}
-
-.navbar.hidden {
-    top: -70px; /* Hide the navbar */
 }
 
 .logo {
-    height: 60px; /* Ajusta el tamaño del logo */
-    position: absolute; /* Posiciona el logo */
-    top: 5px; /* Distancia desde la parte superior */
-    left: 20px; /* Distancia desde la parte izquierda */
+    height: 60px; /* Adjust logo size */
+    position: absolute; /* Positioning the logo */
+    top: 5px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
 }
 
 ul {
@@ -70,4 +75,53 @@ main {
 
 h1, h2, p {
     margin: 20px; /* Add margin to text elements */
+}
+
+.Btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    z-index: -1;
+    border-radius: 9px;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.Btn:hover .BG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+    background-color: rgba(156, 156, 156, 0.466);
 }
