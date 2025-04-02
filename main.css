@@ -1,0 +1,73 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    height: 1000px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar { 
+    position: fixed;
+    top: 0; /* Positioning the navbar at the top */
+    height: 70px;
+    right: 0; 
+    left: 0;
+    background-color: navy; 
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+    -moz-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62); 
+    box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+    transition: top 0.3s; /* Smooth transition for show/hide */
+}
+
+.navbar.hidden {
+    top: -70px; /* Hide the navbar */
+}
+
+.logo {
+    height: 60px; /* Ajusta el tamaño del logo */
+    position: absolute; /* Posiciona el logo */
+    top: 5px; /* Distancia desde la parte superior */
+    left: 20px; /* Distancia desde la parte izquierda */
+}
+
+ul {
+    position: relative;
+    height: 70px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+li {
+    display: inline-block; 
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+}
+
+a {
+    color: white; 
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover {
+    background-color: #a581ff5b;
+    box-shadow: 0px 0px 400px 86px #a481ff;
+    -webkit-box-shadow: 0px 0px 400px 86px #a481ff;
+    -moz-box-shadow: 0px 0px 400px 86px #a481ff;
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 80px; /* Adjust main content position */
+}
+
+h1, h2, p {
+    margin: 20px; /* Add margin to text elements */
+}
